@@ -74,11 +74,11 @@
             <li><a class="nav-link scrollto" href="index.php#features">Features</a></li>
             <li><a class="nav-link scrollto" href="index.php#portfolio">Portfolio</a></li>
             <li><a class="nav-link scrollto" href="schedule.php">Schedules</a></li>
-            <li><a class="nav-link scrollto " href="payment.php">Book now</a></li>
+            <li><a class="nav-link scrollto " href="book.php.php">Book now</a></li>
             <li><a class="nav-link scrollto" href="index.php#team">Team</a></li>
             <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i class="bi bi-list mobile-nav-toggle"></i>y
       </nav>
 
       <div class="header-social-links d-flex align-items-center">
@@ -87,6 +87,9 @@
         <a href="https://www.instagram.com/v.azangu/" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="https://www.linkedin.com/in/victor-shem-7a13821a3/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
+        <div class="m-2">
+            <button class="btn btn-outline-dark float-end" style="background-color:#b99c6f "><a href="../frontEnd/userdashboard.php" class="text-white float-end">My Account</a></button>
+        </div>
     </div>
   </header>
   <main id="main">
@@ -635,15 +638,15 @@
 
           <div class="col-lg-6 col-md-8 float-end ">
             <div class="form ">
-              <form action="../forms/contact.php" method="post" role="form" class="php-email-form">
+              <form action="../backEnd/handleContacts.php" method="post" role="form" class="php-email-form">
                 <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="nameMessage" placeholder="Your Name" required>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="emailMessage" id="email" placeholder="Your Email" required>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                  <input type="text" class="form-control" name="subjectMessage" id="subject" placeholder="Subject" required>
                 </div>
                 <div class="form-group mt-3">
                   <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
@@ -653,7 +656,7 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
+                <div class="text-center"><button type="submitMessage">Send Message</button></div>
               </form>
             </div>
           </div>
@@ -721,6 +724,7 @@
   <script src="../js/jquery.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=Your_reCAPTCHA_site_key"></script>
 
 </body>
 

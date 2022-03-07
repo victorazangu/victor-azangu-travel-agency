@@ -29,7 +29,7 @@ VALUES ('$firstName','$secondName','$emailAddress','$storePassword')";
 $result=mysqli_query($link,$sql);
 if ($result){
     echo "<p class='alert-success'>You have been Registered</p>";
-    header("location:login.php");
+    header("location:../frontEnd/login.php");
 }else{
     echo "Error executing query".mysqli_error($link);
 }

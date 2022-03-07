@@ -24,14 +24,14 @@
 
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
-                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                <li><a class="nav-link scrollto" href="#about">About us</a></li>
-                <li><a class="nav-link scrollto" href="#features">Features</a></li>
-                <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-                <li><a class="nav-link scrollto" href="book.php">Schedules</a></li>
-                <li><a class="nav-link scrollto " href="index.php">Book now</a></li>
-                <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                <li><a class="nav-link scrollto active" href="index.php#home">Home</a></li>
+                <li><a class="nav-link scrollto" href="index.php#about">About us</a></li>
+                <li><a class="nav-link scrollto" href="index.php#features">Features</a></li>
+                <li><a class="nav-link scrollto" href="index.php#portfolio">Portfolio</a></li>
+                <li><a class="nav-link scrollto" href="schedule.php">Schedules</a></li>
+                <li><a class="nav-link scrollto " href="book.php">Book now</a></li>
+                <li><a class="nav-link scrollto" href="index.php#team">Team</a></li>
+                <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>

@@ -26,7 +26,7 @@ if (isset($_POST["login"])){
                     $_SESSION["loggedIn"]=true;
                     $_SESSION["id"]=$id;
                     $_SESSION["username"]=$emailAddress;
-                    header("location:book.php");
+                    header("location:../frontEnd/book.php");
 
                 }else{
                     echo "Wrong password!";
