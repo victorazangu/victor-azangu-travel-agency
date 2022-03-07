@@ -172,11 +172,65 @@
               </div>
           </div>
       </div>
-      </div>
       <div class="col-3">
 
       </div>
+      </div>
+  <div class="row">
+      <div class="col">
+          <section class="about" id="about">
 
+              <div class="container text-center">
+                  <h2>
+                      About Victor Azangu Shemi Travel Agency
+                  </h2>
+                  <p>
+                      Victor Azangu Shemi is a travel booking agency that operates in kenya and has terminas in about every major
+                      city in Kenya,
+                      it helps you book your ticket and plan your journey in advanceto avoid confusionat the booking office and long
+                      standing hours
+                      at the booking officewaiting others to be served.it also helps you to be sure if there is available car and
+                      what time is the
+                      departure
+                  </p>
+                  <div class="row stats-row">
+                      <div class="stats-col text-center col-md-3 col-sm-6">
+                          <div class="circle">
+              <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1"
+                    class="purecounter stats-no"></span>
+                              Satisfied Customers
+                          </div>
+                      </div>
+
+                      <div class="stats-col text-center col-md-3 col-sm-6">
+                          <div class="circle">
+              <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1"
+                    class="purecounter stats-no"></span>
+                              terminas country wide
+                          </div>
+                      </div>
+
+                      <div class="stats-col text-center col-md-3 col-sm-6">
+                          <div class="circle">
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
+                    class="purecounter stats-no"></span>
+                              Hours Of Support
+                          </div>
+                      </div>
+
+                      <div class="stats-col text-center col-md-3 col-sm-6">
+                          <div class="circle">
+              <span data-purecounter-start="0" data-purecounter-end="68" data-purecounter-duration="1"
+                    class="purecounter stats-no"></span>
+                              Hard Workers
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          </section>
+
+      </div>
   </div>
   <footer class="site-footer">
       <div class="bottom">

@@ -74,7 +74,7 @@
             <li><a class="nav-link scrollto" href="index.php#features">Features</a></li>
             <li><a class="nav-link scrollto" href="index.php#portfolio">Portfolio</a></li>
             <li><a class="nav-link scrollto" href="schedule.php">Schedules</a></li>
-            <li><a class="nav-link scrollto " href="book.php">Book now</a></li>
+            <li><a class="nav-link scrollto " href="payment.php">Book now</a></li>
             <li><a class="nav-link scrollto" href="index.php#team">Team</a></li>
             <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
         </ul>
