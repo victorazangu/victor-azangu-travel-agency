@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include "../backEnd/config.php";
 
 if (isset($_POST["login"])){
     $userEmail=$_POST["emailAddress"];
@@ -26,7 +26,7 @@ if (isset($_POST["login"])){
                     $_SESSION["loggedIn"]=true;
                     $_SESSION["id"]=$id;
                     $_SESSION["username"]=$emailAddress;
-                    header("location:../frontEnd/book.php");
+                    header("location:../frontEnd/userdashboard.php");
 
                 }else{
                     echo "Wrong password!";

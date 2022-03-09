@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include "../backEnd/config.php";
 
 //when click the register
 if(isset($_POST["register"])){

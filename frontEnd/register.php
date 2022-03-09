@@ -1,3 +1,6 @@
+<?php
+include "../backEnd/handle-google-login.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,8 +60,8 @@
                             </div>
                             <hr>
                             <div class="row mb-3">
-                                <a href="" class="rounded-pill btn btn-danger"><i class="fa fa-google"></i> Register
-                                    with Google</a>
+                                <button onclick="window.location='<?php echo $login_url;?>'" type="button" class="rounded-pill btn btn-danger"><i class="fa fa-google-plus-official"></i> Login
+                                    with Google</button>
                             </div>
                         </form>
                         <div class="text-center">

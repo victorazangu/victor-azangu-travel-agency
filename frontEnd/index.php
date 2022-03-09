@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +9,7 @@
   <title>VICTOR AZANGU SHEM TRAVEL AGENCY</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+
   <meta property="og:title" content="">
   <meta property="og:image" content="">
   <meta property="og:url" content="">
@@ -74,7 +75,7 @@
             <li><a class="nav-link scrollto" href="index.php#features">Features</a></li>
             <li><a class="nav-link scrollto" href="index.php#portfolio">Portfolio</a></li>
             <li><a class="nav-link scrollto" href="schedule.php">Schedules</a></li>
-            <li><a class="nav-link scrollto " href="book.php.php">Book now</a></li>
+            <li><a class="nav-link scrollto " href="book.php">Book now</a></li>
             <li><a class="nav-link scrollto" href="index.php#team">Team</a></li>
             <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
         </ul>
@@ -638,9 +639,9 @@
 
           <div class="col-lg-6 col-md-8 float-end ">
             <div class="form ">
-              <form action="../backEnd/handleContacts.php" method="post" role="form" class="php-email-form">
+              <form action="../backEnd/handleContacts.php" method="post"  >
                 <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="nameMessage" placeholder="Your Name" required>
+                  <input type="text" name="nameMessage" class="form-control" id="nameMessage" placeholder="Your Name" required>
                 </div>
                 <div class="form-group mt-3">
                   <input type="email" class="form-control" name="emailMessage" id="email" placeholder="Your Email" required>
@@ -654,9 +655,8 @@
                 <div class="my-3">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
-                <div class="text-center"><button type="submitMessage">Send Message</button></div>
+                <div class="text-center"><button name="submitMessage" type="submitMessage">Send Message</button></div>
               </form>
             </div>
           </div>

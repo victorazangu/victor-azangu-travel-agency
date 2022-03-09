@@ -1,5 +1,15 @@
 <?php
 
+
+session_start();
+
+// check if user has looged in?
+
+if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
+
+    header("location:index.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +24,7 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
 </head>
-<body class="m-2 " >
+<body class="m-2 ">
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
@@ -42,7 +52,8 @@
             <a href="https://twitter.com/victor_azangu" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="https://web.facebook.com/victorshem.azangu.3" class="facebook"><i class="bi bi-facebook"></i></a>
             <a href="https://www.instagram.com/v.azangu/" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/victor-shem-7a13821a3/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            <a href="https://www.linkedin.com/in/victor-shem-7a13821a3/" class="linkedin"><i
+                        class="bi bi-linkedin"></i></i></a>
         </div>
     </div>
 </header>
@@ -56,38 +67,38 @@
             <p><input class="mt-2" type="file" name="photo" placeholder="profile image"></p>
         </div>
         <div>
-            <label >Full Name</label>
+            <label>Full Name</label>
             <input class="form-control" type="text" name="fullName">
         </div>
         <div>
-            <label >Email Address</label>
+            <label>Email Address</label>
             <input class="form-control" type="email" name="emailAddress">
         </div>
         <div>
-            <label >Phone Number </label>
+            <label>Phone Number </label>
             <input class="form-control" type="tel" name="phoneNumber">
         </div>
         <div>
-            <label >Address Location</label>
+            <label>Address Location</label>
             <input class="form-control" type="text" name="addressLocation">
         </div>
         <div>
-            <label >Gender</label>
+            <label>Gender</label>
             <div>
                 <input class="form-check-input" type="radio" name="gender" value="male">
-                <label >Male</label>
+                <label>Male</label>
             </div>
             <div>
-                <input class="form-check-input" type="radio" name="gender" value="female" >
-                <label >Female</label>
+                <input class="form-check-input" type="radio" name="gender" value="female">
+                <label>Female</label>
             </div>
             <div>
                 <input class="form-check-input" type="radio" name="gender">
-                <label >others</label>
+                <label>others</label>
             </div>
         </div>
         <div>
-            <label >Date of Birth</label>
+            <label>Date of Birth</label>
             <input class="" type="date" name="DOB">
         </div>
         <div class="text-center">

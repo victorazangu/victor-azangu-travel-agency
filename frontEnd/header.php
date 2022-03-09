@@ -66,7 +66,12 @@
             <a href="https://twitter.com/victor_azangu" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="https://web.facebook.com/victorshem.azangu.3" class="facebook"><i class="bi bi-facebook"></i></a>
             <a href="https://www.instagram.com/v.azangu/" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/victor-shem-7a13821a3/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            <a href="https://www.linkedin.com/in/victor-shem-7a13821a3/" class="linkedin"><i
+                        class="bi bi-linkedin"></i></i></a>
+        </div>
+        <div class="m-2">
+            <button class="btn btn-outline-dark float-end" style="background-color:#b99c6f "><a
+                        href="../frontEnd/userdashboard.php" class="text-white float-end">My Account</a></button>
         </div>
     </div>
 </header>

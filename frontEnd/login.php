@@ -1,9 +1,12 @@
+<?php
+include "../backEnd/handle-google-login.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>REGISTER</title>
+    <title>LOGIN</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/popper.min.js"> </script>
@@ -43,8 +46,8 @@
                             </div>
                             <hr>
                             <div class="row mb-3">
-                                <a href="" class="rounded-pill btn btn-danger"><i class="fa fa-google"></i> login with
-                                    Google</a>
+                                <button onclick="window.location='<?php echo $login_url;?>'" type="button" class="rounded-pill btn btn-danger"><i class="fa fa-google-plus-official"></i> login with
+                                    Google</button>
                             </div>
                         </form>
                         <div class="text-center">

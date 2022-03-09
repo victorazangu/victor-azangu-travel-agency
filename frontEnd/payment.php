@@ -1,3 +1,16 @@
+<?php
+include '../backEnd/handle-google-login.php';
+//
+session_start();
+
+// check if user has looged in?
+
+if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
+
+    header("location:index.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -125,13 +138,13 @@
               <a href="https://www.instagram.com/v.azangu/" class="instagram"><i class="bi bi-instagram"></i></a>
               <a href="https://www.linkedin.com/in/victor-shem-7a13821a3/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
           </div>
+          <div class="m-2">
+              <button class="btn btn-outline-dark float-end" style="background-color:#b99c6f "><a href="../frontEnd/userdashboard.php" class="text-white float-end">My Account</a></button>
+          </div>
       </div>
   </header>
 
-  <div class="row m-3" p-3 >
-      <div class="col-3">
-          <img src="../assets/img/projectimages/bus3.png" alt="" height="500" >
-      </div>
+  <div class="row m-3 p-3 text-center" >
       <div class="col-lg-3 m-3 p-3">
           <img src="../assets/img/projectimages/bus3.png" alt="" height="500" >
       </div>
@@ -172,10 +185,12 @@
               </div>
           </div>
       </div>
-      <div class="col-3">
+      <div class="col-lg-5 m-3 p-3">
+          <div class=" mt-5 "><?php echo "<img style='border-radius:50% ' src='".$_SESSION['picture']."'>"; ?></div>
+          <div class=" mt-2 "><span CLASS="h4 text-white"><?php echo $_SESSION['firstname']?> </span><br></div>
+          <div class=" mt-2 "><span CLASS="h4 "><?php echo $_SESSION['email'];;?> </span></div>
+      </div>
 
-      </div>
-      </div>
   <div class="row">
       <div class="col">
           <section class="about" id="about">
@@ -184,7 +199,7 @@
                   <h2>
                       About Victor Azangu Shemi Travel Agency
                   </h2>
-                  <p>
+                  <p class="small">
                       Victor Azangu Shemi is a travel booking agency that operates in kenya and has terminas in about every major
                       city in Kenya,
                       it helps you book your ticket and plan your journey in advanceto avoid confusionat the booking office and long
@@ -232,7 +247,7 @@
 
       </div>
   </div>
-  <footer class="site-footer">
+  <footer class="site-footer ">
       <div class="bottom">
           <div class="container">
               <div class="row">
@@ -276,9 +291,6 @@
           </div>
       </div>
   </footer>
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-              class="bi bi-arrow-up-short"></i></a>
 
     <script
       type="text/javascript"
