@@ -20,11 +20,11 @@ VALUES ('$nameMessage','$emailMessage','$subjectMessage','$message')";
 
 
     if ($result) {
-        echo "<p class='alert alert-success'>Records have been Added</p>";
+        echo "Records have been Added";
         header("location:../frontEnd/index.php");
     } else {
 
-        echo "<p class='alert alert-danger'>Error executing query $sql</p>" . mysqli_error($link);
+        echo "Error executing query $sql" . mysqli_error($link);
     }
 
 

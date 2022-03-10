@@ -1,13 +1,59 @@
 <?php
+include "../backEnd/config.php";
 include '../backEnd/handle-google-login.php';
 session_start();
- //check if user has looged in?
+// check if user has looged in?
 
 if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
 
     header("location:../frontEnd/index.php");
     exit();
 }
+
+
+
+if (isset($_GET["id"]) and !empty($_GET["id"])) {
+
+//$id = $_GET["id"];
+
+$sql = "SELECT `nameMessage`, `emailMessage`, `subjectMessage`, `message` FROM `messages` WHERE id=$id";
+
+$result = mysqli_query($link, $sql);
+
+if ($result) {
+
+$data = mysqli_num_rows($result);
+
+if ($data == 1) {
+
+$row = mysqli_fetch_array($result);
+
+$nameMessage = $row['nameMessage'];
+$emailMessage = $row['emailMessage'];
+$subjectMessage= $row['subjectMessage'];
+$message = $row['message'];
+
+
+
+$_SESSION['firstname'];
+$_SESSION['lastname'];
+$_SESSION['email'];
+
+
+} else {
+    echo "No record was found";
+}
+
+
+} else {
+    echo "error executing query $sql" . mysqli_error($link);
+}
+
+
+} else {
+    echo "id value not picked";
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -32,7 +78,7 @@ if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
     <div class="container d-flex align-items-center">
 
         <div id="logo" class="me-auto">
-            <a href="index.php"><img src="../assets/img/Artboard%203.png" alt="victor logo"></a>
+            <a href="index.php"><img src="../assets/img/projectimages/Artboard%203.png" alt="victor logo"></a>
             <!-- Uncomment below if you prefer to use a text image -->
             <!--<h1><a href="#hero">Bell</a></h1>-->
         </div>
@@ -175,7 +221,7 @@ if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
             <hr>
             <div class="row p-2 m-2 ">
                 <div class="col-6">
-                    <p class="h3 mb-2 grey">DashBoard</p>
+                    <p class="h3 mb-2 grey">USER</p>
                 </div>
                 <div class="col-6 " >
                     <!-- Button trigger modal -->

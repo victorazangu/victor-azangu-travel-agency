@@ -3,7 +3,7 @@
 
 session_start();
 
-// check if user has looged in?
+ //check if user has looged in?
 
 if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
 
@@ -29,7 +29,7 @@ if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
     <div class="container d-flex align-items-center">
 
         <div id="logo" class="me-auto">
-            <a href="index.php"><img src="../assets/img/Artboard%203.png" alt="victor logo"></a>
+            <a href="index.php"><img src="../assets/img/projectimages/Artboard%203.png" alt="victor logo"></a>
             <!-- Uncomment below if you prefer to use a text image -->
             <!--<h1><a href="#hero">Bell</a></h1>-->
         </div>

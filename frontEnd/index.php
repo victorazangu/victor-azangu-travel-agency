@@ -36,9 +36,9 @@
     <div class="container text-center">
       <div class="row">
         <div class="col p-0 m-0 ">
-            <button class="btn btn-full scrollto float-end m-3"><a href="register.php" style="color:white;font-weight: bold"">sign
+            <button class="btn btn-full scrollto float-end m-3"><a href="../frontEnd/register.php" style="color:white;font-weight: bold"">sign
             up</a></button>
-          <button class="btn btn-full scrollto float-end m-3"><a href="login.php" style="color:white;font-weight: bold">sign in</a></button>
+          <button class="btn btn-full scrollto float-end m-3"><a href="../frontEnd/login.php" style="color:white;font-weight: bold">sign in</a></button>
         </div>
       </div>
       <div class="row">
@@ -65,7 +65,7 @@
     <div class="container d-flex align-items-center">
 
       <div id="logo" class="me-auto">
-        <a href="index.php"><img src="../assets/img/Artboard%203.png" alt="victor logo"></a>
+        <a href="index.php"><img src="../assets/img/projectimages/Artboard%203.png" alt="victor logo"></a>
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -89,7 +89,7 @@
         <a href="https://www.linkedin.com/in/victor-shem-7a13821a3/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
         <div class="m-2">
-            <button class="btn btn-outline-dark float-end" style="background-color:#b99c6f "><a href="../frontEnd/userdashboard.php" class="text-white float-end">My Account</a></button>
+            <button class="btn btn-outline-dark float-end" style="background-color:#b99c6f "><a href="login.php" class="text-white float-end">My Account</a></button>
         </div>
     </div>
   </header>

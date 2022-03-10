@@ -1,9 +1,9 @@
 <?php
 include '../backEnd/handle-google-login.php';
-//
+
 session_start();
 
-// check if user has looged in?
+ //check if user has looged in?
 
 if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
 
@@ -115,7 +115,7 @@ if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
       <div class="container d-flex align-items-center">
 
           <div id="logo" class="me-auto">
-              <a href="index.php"><img src="../assets/img/Artboard%203.png" alt="victor logo"></a>
+              <a href="index.php"><img src="../assets/img/projectimages/Artboard%203.png" alt="victor logo"></a>
           </div>
 
           <nav id="navbar" class="navbar order-last order-lg-0">
@@ -139,7 +139,7 @@ if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
               <a href="https://www.linkedin.com/in/victor-shem-7a13821a3/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
           </div>
           <div class="m-2">
-              <button class="btn btn-outline-dark float-end" style="background-color:#b99c6f "><a href="../frontEnd/userdashboard.php" class="text-white float-end">My Account</a></button>
+              <button class="btn btn-outline-dark float-end" style="background-color:#b99c6f "><a href="../frontEnd/login.php" class="text-white float-end">My Account</a></button>
           </div>
       </div>
   </header>
@@ -187,7 +187,7 @@ if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
       </div>
       <div class="col-lg-5 m-3 p-3">
           <div class=" mt-5 "><?php echo "<img style='border-radius:50% ' src='".$_SESSION['picture']."'>"; ?></div>
-          <div class=" mt-2 "><span CLASS="h4 text-white"><?php echo $_SESSION['firstname']?> </span><br></div>
+          <div class=" mt-2 "><span CLASS="h4 "><?php echo $_SESSION['firstname']?> </span><br></div>
           <div class=" mt-2 "><span CLASS="h4 "><?php echo $_SESSION['email'];;?> </span></div>
       </div>
 

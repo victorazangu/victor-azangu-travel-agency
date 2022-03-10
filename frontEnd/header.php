@@ -43,7 +43,7 @@
     <div class="container d-flex align-items-center">
 
         <div id="logo" class="me-auto">
-            <a href="index.php"><img src="../assets/img/Artboard%203.png" alt="victor logo"></a>
+            <a href="index.php"><img src="../assets/img/projectimages/Artboard%203.png" alt="victor logo"></a>
             <!-- Uncomment below if you prefer to use a text image -->
             <!--<h1><a href="#hero">Bell</a></h1>-->
         </div>
@@ -71,7 +71,7 @@
         </div>
         <div class="m-2">
             <button class="btn btn-outline-dark float-end" style="background-color:#b99c6f "><a
-                        href="../frontEnd/userdashboard.php" class="text-white float-end">My Account</a></button>
+                        href="../frontEnd/login.php" class="text-white float-end">My Account</a></button>
         </div>
     </div>
 </header>

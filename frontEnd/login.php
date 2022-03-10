@@ -16,7 +16,7 @@ include "../backEnd/handle-google-login.php";
 
 </head>
 
-<body class="bg-primary m-5 ">
+<body class=" m-5 " style="background-color:#199EB8 ">
     <div class="container p-4 " style="background-color:#199EB8;border-radius: 10px;">
         <div class="card" style="background-color:#b99c6f;border-radius: 10px;">
             <div class="card-body">
@@ -28,7 +28,9 @@ include "../backEnd/handle-google-login.php";
 
                     </div>
                     <div class="col-lg-7">
+
                         <div class="text-center">
+
                             <h4 class="grey">Karibu tena(Welcome again)</h4>
                         </div>
                         <form action="../backEnd/handleLogin.php" method="post">
@@ -46,9 +48,10 @@ include "../backEnd/handle-google-login.php";
                             </div>
                             <hr>
                             <div class="row mb-3">
-                                <button onclick="window.location='<?php echo $login_url;?>'" type="button" class="rounded-pill btn btn-danger"><i class="fa fa-google-plus-official"></i> login with
+                                <button onclick="window.location='<?php echo $login_url;?>'" type="button" class="rounded-pill btn btn-primary"><i class="fa fa-google-plus-official"></i> login with
                                     Google</button>
                             </div>
+                            
                         </form>
                         <div class="text-center">
                             <a href="" class="small">Forgot password</a>
@@ -56,6 +59,14 @@ include "../backEnd/handle-google-login.php";
                         <div class="text-center">
                             <a href="register.php" class="small">have no an account? Create account</a>
                         </div>
+                    </div>
+                </div>
+                <div class="row " style="background-color:#199EB8 ">
+                    <div class="col-6 m-2">
+                        <img src="../assets/img/projectimages/LOGO1.png" alt="logp" height="350" width="350">
+                    </div>
+                    <div class="col-5 m-2  ">
+                        <img src="../assets/img/projectimages/LOGO1.png" alt="logp" height="350" width="350">
                     </div>
                 </div>
             </div>

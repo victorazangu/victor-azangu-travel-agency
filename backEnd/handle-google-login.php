@@ -51,8 +51,17 @@ if (isset($_GET['code'])){
             $picture=$data['picture'];
             $_SESSION['picture']=$picture;
         }
+        $_SESSION['firstname']=$firstname;
+        $_SESSION['lastname']=$lastname;
+        $_SESSION['email']=$email;
+       // $_SESSION['gender']=$gender;
+        $_SESSION['picture']=$picture;
 
 
+$sql="INSERT INTO `gusers`(`given_name`, `family_name`, `email`, `gender`, `picture`)
+ VALUES ('$firstname','$lastname','$email','$gender','$picture')";
+
+$result=$result=mysqli_query($link,$sql);
 
     }
 

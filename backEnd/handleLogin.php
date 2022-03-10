@@ -1,6 +1,6 @@
 <?php
 include "../backEnd/config.php";
-
+session_start();
 if (isset($_POST["login"])){
     $userEmail=$_POST["emailAddress"];
     $userpassword=$_POST["password"];
@@ -19,14 +19,31 @@ if (isset($_POST["login"])){
                 $id=$row["ID"];
                 $emailAddress=$row["emailAddress"];
                 $password=$row["password"];
+                $user_type=$row['usertype'];
 
                 //verify the password ;compaire the hash password and not hashed one
                 if (password_verify($userpassword,$password)){
-                    session_start();
-                    $_SESSION["loggedIn"]=true;
-                    $_SESSION["id"]=$id;
-                    $_SESSION["username"]=$emailAddress;
-                    header("location:../frontEnd/userdashboard.php");
+                    if ($row['usertype']==''){
+
+
+                        $_SESSION["loggedin"]=true;
+                        $_SESSION["id"]=$id;
+                        $_SESSION["username"]=$emailAddress;
+                        $_SESSION['usertype']==$user_type;
+
+                        header("location:../frontEnd/userdashboard.php");
+                    }elseif ($row['usertype']=='admin'){
+
+                        $_SESSION["loggedin"]=true;
+                        $_SESSION["id"]=$id;
+                        $_SESSION["username"]=$emailAddress;
+                        $_SESSION['usertype']==$user_type;
+
+                        header("location:../frontEnd/adminDashboard.php");
+                    }else{
+                        echo "Please ask admin to assign ypu a user type";
+                    }
+
 
                 }else{
                     echo "Wrong password!";
@@ -34,7 +51,7 @@ if (isset($_POST["login"])){
 
             }
         }else{
-            echo "<p class='alert-danger'>No such email address in our database!</p>";
+            echo "No such email address in our database!";
         }
 
     }

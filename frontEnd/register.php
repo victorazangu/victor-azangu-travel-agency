@@ -16,7 +16,7 @@ include "../backEnd/handle-google-login.php";
 
 </head>
 
-<body class="bg-primary m-5" id="body">
+<body class="m-5" id="body" style="background-color:#199EB8 ">
 
     <div class="container p-4" style="background-color:#199EB8;border-radius: 10px;">
         <div class="card" style="background-color:#b99c6f;border-radius: 10px;">
@@ -60,7 +60,7 @@ include "../backEnd/handle-google-login.php";
                             </div>
                             <hr>
                             <div class="row mb-3">
-                                <button onclick="window.location='<?php echo $login_url;?>'" type="button" class="rounded-pill btn btn-danger"><i class="fa fa-google-plus-official"></i> Login
+                                <button onclick="window.location='<?php echo $login_url;?>'" type="button" class="rounded-pill btn btn-primary"><i class="fa fa-google-plus-official"></i> Login
                                     with Google</button>
                             </div>
                         </form>
@@ -70,6 +70,14 @@ include "../backEnd/handle-google-login.php";
                         <div class="text-center">
                             <a href="login.php" class="small">Already have an account? Login</a>
                         </div>
+                    </div>
+                </div>
+                <div class="row " style="background-color:#199EB8 ">
+                    <div class="col ">
+                        <img src="../assets/img/projectimages/LOGO1.png" alt="logp" height="350" width="350">
+                    </div>
+                    <div class="col">
+                        <img src="../assets/img/projectimages/LOGO1.png" alt="logp" height="350" width="350">
                     </div>
                 </div>
             </div>

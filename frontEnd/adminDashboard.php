@@ -1,50 +1,40 @@
 <?php
-
+include "../backEnd/config.php";
+include '../backEnd/handle-google-login.php';
 session_start();
+//check if user has looged in?
 
-// check if user has looged in?
 if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
 
     header("location:../frontEnd/index.php");
     exit();
 }
-
-
-include "../backEnd/config.php";
-include '../backEnd/handle-google-login.php';
-
-if (isset($_GET["id"]) and !empty($_GET["id"])) {
-
-$id = $_GET["id"];
-
-$sql = "SELECT * FROM `messages` WHERE  id=$id";
-
+$sql = "SELECT * FROM `messages` ";
+#execute query
 $result = mysqli_query($link, $sql);
 
+#check
 if ($result) {
-
-$data = mysqli_num_rows($result);
-
-if ($data == 1) {
-
-    $row = mysqli_fetch_array($result);
-
-    $nameMessage = $row['nameMessage'];
-    $emailMessage = $row['emailMessage'];
-    $subjectMessage = $row['subjectMessage'];
-    $message = $row['message'];
-} else {
-    echo "No record was found";
-}
+    $data = mysqli_num_rows($result);
+    #is there data here?
+    if ($data > 0) {
 
 
-} else {
-    echo "error executing query $sql" . mysqli_error($link);
-}
+        while ($row = mysqli_fetch_array($result)) {
+              $nameMessage = $row['nameMessage'];
+              $emailMessage = $row['emailMessage'];
+              $subjectMessage= $row['subjectMessage'];
+              $message = $row['message'];
 
+              $data++;
+        }
+
+    } else {
+        echo "no records were found in your database!";
+    }
 
 } else {
-    echo "id value not picked";
+    echo "Error executing query $sql" . mysqli_error($link);
 }
 
 ?>
@@ -72,7 +62,7 @@ if ($data == 1) {
     <div class="container d-flex align-items-center">
 
         <div id="logo" class="me-auto">
-            <a href="index.php"><img src="../assets/img/Artboard%203.png" alt="victor logo"></a>
+            <a href="index.php"><img src="../assets/img/projectimages/Artboard%203.png" alt="victor logo"></a>
             <!-- Uncomment below if you prefer to use a text image -->
             <!--<h1><a href="#hero">Bell</a></h1>-->
         </div>
@@ -227,7 +217,7 @@ if ($data == 1) {
             <hr>
             <div class="row p-2 m-2 ">
                 <div class="col-4">
-                    <p class="h3 mb-2 grey">DashBoard</p>
+                    <p class="h3 mb-2 grey">ADMIN</p>
                 </div>
                 <div class="col-8 ">
                     <!-- Button trigger modal -->
@@ -269,8 +259,15 @@ if ($data == 1) {
                                     <div>AVERAGE MONTHLY TRIPS</div>
                                     <div>256</div>
                                 </div>
+                                <div class="col">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%"
+                                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-auto">
-                                    <i class="fa fa-calendar-0 fx-2x grey "></i>
+                                    <i class="fa fa-line-chart fx-2x grey "></i>
                                 </div>
                             </div>
                         </div>
@@ -291,8 +288,8 @@ if ($data == 1) {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-auto">
-                                    <i class="fa fa-reorder fx-2x grey "></i>
+                                <div class="col-auto ">
+                                    <i class="fa fa-reorder fx-2x grey " ></i>
                                 </div>
                             </div>
                         </div>
@@ -326,7 +323,7 @@ if ($data == 1) {
             <div class="row m-2">
                 <div class="col">
                     <div class="card">
-                        <div class="card-header text-primary bg-white">Quarterly Details</div>
+                        <div class="card-header text-primary bg-white">Messages</div>
                         <div class="card-body">
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
@@ -334,14 +331,15 @@ if ($data == 1) {
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#collapseOne" aria-expanded="true"
                                                 aria-controls="collapseOne">
-                                            <?php echo $nameMessage; ?>
+                                            <?php echo "Name:".$nameMessage; ?>
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
                                          aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <?php echo $subjectMessage; ?>
-                                            <?php echo $message; ?>
+                                            <?php echo "Subject:".$subjectMessage."<br>"; ?>
+                                            <?php echo "Email:".$emailMessage."<br>"; ?>
+                                            <?php echo "Message:".$message."<br>"; ?>
                                         </div>
                                     </div>
                                 </div>
@@ -350,14 +348,15 @@ if ($data == 1) {
                                         <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                                 aria-expanded="false" aria-controls="collapseTwo">
-                                            <?php echo $nameMessage; ?>
+                                            <?php echo "Name:".$nameMessage; ?>
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse"
                                          aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <?php echo $subjectMessage; ?>
-                                            <?php echo $message; ?>
+                                            <?php echo "Subject:".$subjectMessage."<br>"; ?>
+                                            <?php echo "Email:".$emailMessage."<br>"; ?>
+                                            <?php echo "Message:".$message."<br>"; ?>
                                         </div>
                                     </div>
                                 </div>
@@ -366,14 +365,15 @@ if ($data == 1) {
                                         <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                                 aria-expanded="false" aria-controls="collapseThree">
-                                            <?php echo $nameMessage; ?>
+                                            <?php echo "Name:".$nameMessage; ?>
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                          aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <?php echo $subjectMessage; ?>
-                                            <?php echo $message; ?>
+                                            <?php echo "Subject:".$subjectMessage."<br>"; ?>
+                                            <?php echo "Email:".$emailMessage."<br>"; ?>
+                                            <?php echo "Message:".$message."<br>"; ?>
 
                                         </div>
                                     </div>

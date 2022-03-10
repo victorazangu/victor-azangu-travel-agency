@@ -23,13 +23,13 @@ $result=mysqli_query($link,$sql);
 
 //photos
 if(move_uploaded_file($temporaryName,$folder)){
-    echo "<p class='alert alert-info'>Photo uploaded successfully</p>";
+    echo "Photo uploaded successfully";
 }else{
-    echo "<p class='alert alert-warning'>Photo Not uploaded</p>";
+    echo "Photo Not uploaded";
 }
 if ($result){
-    echo "<p class='alert alert-info'>Record hae been added successfully</p>";
+    echo "Record hae been added successfully";
 }else{
-    echo "<p class='alert alert-warning'>Error Uploading your Record</p>".mysqli_error($link);
+    echo "Error Uploading your Record".mysqli_error($link);
 }
 }
