@@ -235,7 +235,7 @@ if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
 
                       <div class="stats-col text-center col-md-3 col-sm-6">
                           <div class="circle">
-              <span data-purecounter-start="0" data-purecounter-end="68" data-purecounter-duration="1"
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1"
                     class="purecounter stats-no"></span>
                               Hard Workers
                           </div>

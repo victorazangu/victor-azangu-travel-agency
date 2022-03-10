@@ -300,25 +300,32 @@ $_SESSION['email'];
                             <div class="carousel-item active" data-bs-interval="2000">
                                 <img src="../assets/img/projectimages/porf-8.jpg" class="d-block w-100"  style="height: 500px"alt="...">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>Malindi</h5>
-                                    <p> Tropical beaches dotted with hotels and resorts.</p>
+                                    <h5 style="color:#000000;">Malindi</h5>
+                                    <p style="color:#000000;" > Tropical beaches dotted with hotels and resorts.</p>
                                 </div>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
                                 <img src="../assets/img/projectimages/porf-7.jpg" class="d-block w-100" style="height: 500px" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>Thika</h5>
-                                    <p>Magical and breathtaking Fourteen Falls.</p>
+                                    <h5 style="color:#ffffff;" >Thika</h5>
+                                    <p style="color:#ffffff;">Magical and breathtaking Fourteen Falls.</p>
                                 </div>
                             </div>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
                                 <img src="../assets/img/projectimages/porf-6.jpg" class="d-block w-100" style="height: 500px" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>Eldoret</h5>
-                                    <p>And see the beauty of rift valley</p>
+                                    <h5 style="color:#000000;">Eldoret</h5>
+                                    <p style="color:#000000;">And see the beauty of rift valley</p>
                                 </div>
                             </div>
+                          <div class="carousel-item" data-bs-interval="2000">
+                            <img src="../assets/img/projectimages/porf-6.jpg" class="d-block w-100" style="height: 500px" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 style="color:#000000;">Eldoret</h5>
+                                <p style="color:#000000;">And see the beauty of rift valley</p>
+                            </div>
+                          </div>
                             <div class="carousel-item" data-bs-interval="2000">
                                 <img src="../assets/img/projectimages/porf-5.jpg" class="d-block w-100" style="height: 500px" alt="...">
                                 <div class="carousel-caption d-none d-md-block">

@@ -19,22 +19,19 @@ if ($result) {
     #is there data here?
     if ($data > 0) {
 
-
         while ($row = mysqli_fetch_array($result)) {
-              $nameMessage = $row['nameMessage'];
-              $emailMessage = $row['emailMessage'];
-              $subjectMessage= $row['subjectMessage'];
-              $message = $row['message'];
+            $id = $row['id'];
+            $nameMessage = $row['nameMessage'];
+            $emailMessage = $row['emailMessage'];
+            $subjectMessage = $row['subjectMessage'];
+            $message = $row['message'];
 
-              $data++;
         }
-
-    } else {
-        echo "no records were found in your database!";
     }
+ else {
+    echo "no records were found in your database!";
+}
 
-} else {
-    echo "Error executing query $sql" . mysqli_error($link);
 }
 
 ?>
@@ -256,8 +253,8 @@ if ($result) {
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <div>AVERAGE MONTHLY TRIPS</div>
-                                    <div>256</div>
+                                    <div>Google logins(USERS)</div>
+                                    <div>26</div>
                                 </div>
                                 <div class="col">
                                     <div class="progress">
@@ -278,8 +275,8 @@ if ($result) {
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <div>AVAILABLE BUSES</div>
-                                    <div>15 BUSES</div>
+                                    <div>Email logins(USERS)</div>
+                                    <div>15</div>
                                 </div>
                                 <div class="col">
                                     <div class="progress">
@@ -301,7 +298,7 @@ if ($result) {
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <div>WORKING BUSES</div>
+                                    <div>AVAILABLE BUSES</div>
                                     <div>15 BUSES</div>
                                 </div>
                                 <div class="col">
@@ -327,15 +324,17 @@ if ($result) {
                         <div class="card-body">
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseOne" aria-expanded="true"
-                                                aria-controls="collapseOne">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
                                             <?php echo "Name:".$nameMessage; ?>
+                                            <a class='m-2 float-end' '><span class='fa fa-trash'></span></a>
+
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
-                                         aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                         aria-labelledby="headingTwo" data-bs-parent="#accordionExample1">
                                         <div class="accordion-body">
                                             <?php echo "Subject:".$subjectMessage."<br>"; ?>
                                             <?php echo "Email:".$emailMessage."<br>"; ?>
@@ -349,10 +348,12 @@ if ($result) {
                                                 data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                                 aria-expanded="false" aria-controls="collapseTwo">
                                             <?php echo "Name:".$nameMessage; ?>
+                                            <a class='m-2 float-end' '><span class='fa fa-trash'></span></a>
+
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse"
-                                         aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                         aria-labelledby="headingTwo" data-bs-parent="#accordionExample1">
                                         <div class="accordion-body">
                                             <?php echo "Subject:".$subjectMessage."<br>"; ?>
                                             <?php echo "Email:".$emailMessage."<br>"; ?>
@@ -366,10 +367,12 @@ if ($result) {
                                                 data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                                 aria-expanded="false" aria-controls="collapseThree">
                                             <?php echo "Name:".$nameMessage; ?>
+                                            <a class='m-2 float-end' '><span class='fa fa-trash'></span></a>
+
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
-                                         aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                         aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
                                         <div class="accordion-body">
                                             <?php echo "Subject:".$subjectMessage."<br>"; ?>
                                             <?php echo "Email:".$emailMessage."<br>"; ?>

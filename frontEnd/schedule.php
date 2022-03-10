@@ -8,7 +8,7 @@ if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
     header("location:../frontEnd/index.php");
     exit();
 }
-include "header.php";
+include "header1.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

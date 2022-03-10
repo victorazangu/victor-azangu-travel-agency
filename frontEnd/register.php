@@ -19,7 +19,7 @@ include "../backEnd/handle-google-login.php";
 <body class="m-5" id="body" style="background-color:#199EB8 ">
 
     <div class="container p-4" style="background-color:#199EB8;border-radius: 10px;">
-        <div class="card" style="background-color:#b99c6f;border-radius: 10px;">
+        <div class="card" style="background-color:#ddd;border-radius: 10px;">
             <div class="card-body">
                 <div class="row">
                     <div class="col-lg-5">

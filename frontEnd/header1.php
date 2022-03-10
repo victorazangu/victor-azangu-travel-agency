@@ -1,14 +1,4 @@
 <?php
-session_start();
-
- //check if user has looged in?
-
-if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
-
-    header("location:index.php");
-    exit();
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +18,6 @@ if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
     <title>schedule</title>
 </head>
 <body style="background-color: ;">
-
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
@@ -57,20 +46,14 @@ if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
             <a href="https://web.facebook.com/victorshem.azangu.3" class="facebook"><i class="bi bi-facebook"></i></a>
             <a href="https://www.instagram.com/v.azangu/" class="instagram"><i class="bi bi-instagram"></i></a>
             <a href="https://www.linkedin.com/in/victor-shem-7a13821a3/" class="linkedin"><i
-                    class="bi bi-linkedin"></i></i></a>
+                        class="bi bi-linkedin"></i></i></a>
         </div>
         <div class="m-2">
             <button class="btn btn-outline-dark float-end" style="background-color:#b99c6f "><a
-                    href="../frontEnd/login.php" class="text-white float-end">My Account</a></button>
+                        href="../frontEnd/login.php" class="text-white float-end">My Account</a></button>
         </div>
     </div>
 </header>
-<?php
-include "bookrow.php";
-include "bookrow.php";
-include "bookrow.php";
-include "bookrow.php";
-?>
 
 
 </div>
@@ -85,9 +68,3 @@ include "bookrow.php";
 <!-- Template Main JS File -->
 <script src="../assets/js/main.js"></script>
 </html>
-
-
-
-
-
-
